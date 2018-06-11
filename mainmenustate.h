@@ -2,6 +2,7 @@
 #define MAINMENUSTATE
 
 #include "gamestate.h"
+#include "menubutton.h"
 
 class MainMenuState : public GameState
 {
@@ -30,6 +31,7 @@ private:
     sf::Texture *buttonTexture;
     sf::Text *buttonText;
     sf::Font *font;
+    MenuButton *buttonBegin;
     bool inButtonBoundary;
 };
 

@@ -9,6 +9,9 @@ void MainMenuState::Init()
     button        = new sf::Sprite ;
     font          = new sf::Font   ;
     buttonText    = new sf::Text   ;
+    buttonBegin   = new MenuButton ;
+
+    buttonBegin->parent=this;
 
     texture->loadFromFile("Resources/testimg.jpg")  ;
     buttonTexture->loadFromFile("Resources/btn.png");

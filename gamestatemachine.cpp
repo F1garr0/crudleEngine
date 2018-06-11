@@ -16,6 +16,7 @@
 	    }
 	    states.push_back(state);
 	    states.back()->Init();
+        states.back()->parent=this;
     };
 
     void GameStateMachine::PushState(GameState *state){states.push_back(state);};
@@ -25,5 +26,5 @@
     void GameStateMachine::Update(sf::RenderWindow &window){states.back()->Update(window);};
     void GameStateMachine::Draw(sf::RenderWindow &window){states.back()->Draw(window);};
     
-    bool GameStateMachine::Running(){};
+    bool GameStateMachine::Running(){return true;};
     void GameStateMachine::Quit(){};

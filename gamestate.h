@@ -12,6 +12,7 @@ public:
     virtual void HandleEvents(sf::RenderWindow &window, GameStateMachine *stateMachine);
     virtual void Update(sf::RenderWindow &window);
     virtual void Draw(sf::RenderWindow &window);
+    GameStateMachine *parent;
 };
 
 #endif

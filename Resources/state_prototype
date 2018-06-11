@@ -1,0 +1,47 @@
+
+class PlayingState : public GameState
+{
+public:
+    void Init()
+    {
+
+    };
+
+    void Cleanup()
+    {
+
+    };
+
+    void Pause(){};
+    void Resume(){};
+
+    void HandleEvents(sf::RenderWindow &window, GameStateMachine* GameStateMachine)
+    {
+
+    };
+
+    void Update(sf::RenderWindow &window)
+    {
+
+    };
+
+    void Draw(sf::RenderWindow &window)
+    {
+        
+
+    };
+
+    static PlayingState* Instance()
+    {
+        static PlayingState playingstate;
+        return &playingstate;
+    };
+    
+protected:
+    PlayingState(){};
+
+private:
+    sf::Sprite sprite;
+    sf::Texture texture;
+
+};
