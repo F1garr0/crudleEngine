@@ -21,13 +21,13 @@ $ ./main
 
 ## Описание структуры проекта
 1. [GameStateMachine](#statemachine)
+    1. [ChangeState()](#changestate)
+    2. [PushState()](#pushstate)
+    3. [PopState()](#popstate)
 2. [GameState](#state)
 3. [Button](#button)
 
 
 #### <a name="statemachine"></a> Game State Machine
 Это класс описывающий конечный автомат с магазинной памятью. Для его использования необходимо создать экземпляр класса *GameStateMachine*
-Он содержит в себе __stl vector__ *states* и методы для работы с ним:
-1. 1. ChangeState
-2. 2. PushState
-3. 3. PopState
+Он содержит в себе __stl vector__ *states* содержащий в себе непосредственно игровые состояния и методы для работы с ним.
