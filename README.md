@@ -21,9 +21,9 @@ $ ./main
 
 ## Описание структуры проекта
 1. [GameStateMachine](#statemachine)
-    1. [ChangeState()](#changestate)
-    2. [PushState()](#pushstate)
-    3. [PopState()](#popstate)
+    - [ChangeState()](#changestate)
+    - [PushState()](#pushstate)
+    - [PopState()](#popstate)
 2. [GameState](#state)
 3. [Button](#button)
 
