@@ -9,17 +9,22 @@
 class MenuButton : public sf::Sprite
 {
 private:
-    sf::Texture texture;
+    sf::Texture defaultTexture;
+    sf::Texture focusedTexture;
     bool focused;
-
+    sf::IntRect bounds;
 
 public:
-    MenuButton(/* args */);
+    MenuButton();
+    MenuButton(GameState &gamestate);
     ~MenuButton();
     bool isFocused();
+    void loadTexture(sf::String stringPath);
+    void setFocus(bool value);
+    bool isMouseInBounds(sf::Window &window);
     //std::function onClick;
     GameState *parent;
-    
+    void onClick();
 
 };
 

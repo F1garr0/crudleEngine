@@ -9,9 +9,10 @@ void MainMenuState::Init()
     button        = new sf::Sprite ;
     font          = new sf::Font   ;
     buttonText    = new sf::Text   ;
-    buttonBegin   = new MenuButton ;
 
+    buttonBegin = new MenuButton;
     buttonBegin->parent=this;
+
 
     texture->loadFromFile("Resources/testimg.jpg")  ;
     buttonTexture->loadFromFile("Resources/btn.png");
@@ -76,7 +77,8 @@ void MainMenuState::HandleEvents(sf::RenderWindow &window, GameStateMachine* sta
             case sf::Event::MouseButtonReleased:
                 if(inButtonBoundary && event.key.code == sf::Mouse::Left)
                 {
-                    stateMachine->ChangeState(PlayingState::Instance());
+                    //stateMachine->ChangeState(PlayingState::Instance());
+                    buttonBegin->onClick();
                 }
             break;
         
