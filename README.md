@@ -29,5 +29,14 @@ $ ./main
 
 
 #### <a name="statemachine"></a> Game State Machine
-Это класс описывающий конечный автомат с магазинной памятью. Для его использования необходимо создать экземпляр класса __GameStateMachine__
-Он содержит в себе *stl vector* __states__ содержащий в себе непосредственно игровые состояния и методы для работы с ним.
+Это класс описывающий конечный автомат с магазинной памятью.
+Для его использования необходимо создать экземпляр класса __GameStateMachine__
+```c++
+GameStateMachine stateMachine;
+```
+Он содержит в себе *stl vector* __states__ содержащий в себе непосредственно игровые состояния и методы для работы с ним:
+```c++
+stateMachine.changeState(/*data*/);
+stateMachine.pushState(/*data*/);
+stateMachine.popState(/*data*/);
+```
