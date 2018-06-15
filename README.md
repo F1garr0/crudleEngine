@@ -28,7 +28,7 @@ $ ./main
 3. [Button](#button)
 
 
-#### <a name="statemachine"></a> Game State Machine
+### <a name="statemachine"></a> Game State Machine
 Это класс описывающий конечный автомат с магазинной памятью.
 Для его использования необходимо создать экземпляр класса __GameStateMachine__
 ```c++
