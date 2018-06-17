@@ -47,7 +47,7 @@ stateMachine.PopState(/*data*/);
 ```
   
   
-### <a name-"stateinstance"></a> State::Instance()
+### <a name="stateinstance"></a> State::Instance()
 Каждый наследник должен реализовать метод *Instance()* таким образом чтобы в качестве параметров он принимал те данные которые нужны будут для использования в этом состоянии.
 Например 
 ```c++
