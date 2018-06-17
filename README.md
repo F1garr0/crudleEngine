@@ -41,9 +41,9 @@ GameStateMachine stateMachine;
 ```
 Он содержит в себе *stl vector* __states__ содержащий в себе непосредственно игровые состояния и методы для работы с ним:
 ```c++
-stateMachine.ChangeState(/*data*/);
-stateMachine.PushState(/*data*/);
-stateMachine.PopState(/*data*/);
+stateMachine.ChangeState(GameState &state);
+stateMachine.PushState(GameState &state);
+stateMachine.PopState(GameState &state);
 ```
   
 ### <a name="state"></a> GameState
@@ -63,7 +63,7 @@ class MyState : public GameState
 Каждый наследник должен реализовать метод *Instance()* таким образом чтобы в качестве параметров он принимал те данные которые нужны будут для использования в этом состоянии.
 Например 
 ```c++
-Gamestate Instance(Inventory &inventory){/**/};
+GameState Instance(Inventory &inventory){/**/};
 ```
   
 ```c++
