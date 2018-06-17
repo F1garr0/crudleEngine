@@ -39,7 +39,7 @@ $ ./main
 ```c++
 GameStateMachine stateMachine;
 ```
-Он содержит в себе *stl vector* __[GameState](#state)__ содержащий в себе непосредственно игровые состояния и методы для работы с ним:
+Он содержит в себе *stl vector* __[states](#state)__ содержащий в себе непосредственно игровые состояния и методы для работы с ним:
 ```c++
 stateMachine.ChangeState(GameState &state);
 stateMachine.PushState(GameState &state);
