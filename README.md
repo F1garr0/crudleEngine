@@ -33,7 +33,7 @@ $ ./main
     - blah
     - blah
   
-### <a name="statemachine"></a> GameStateMachine
+### <a name="statemachine"></a> [GameStateMachine](#statemachine)
 Это класс описывающий конечный автомат с магазинной памятью.
 Для его использования необходимо создать экземпляр класса __GameStateMachine__
 ```c++
@@ -49,12 +49,12 @@ stateMachine.PopState(GameState &state);
 ### <a name=""></a>
 
 ### <a name="changestate"></a> [GameStateMachine](#statemachine)::ChangeState()
-Метод для манипуляции игровыми состояниями, при использовании которого все текущие состояния очищаются и заменяются переданным в качетве параметра через [Instance()](#stateinstance).
+Метод для манипуляции игровыми состояниями, при использовании которого все текущие состояния очищаются и заменяются переданным в качетве параметра через [Instance()](#stateinstance) описанный самим разработчиком.
 ```c++
 stateMachine.ChangeState(MyState::Instance());
 ```
   
-### <a name="state"></a> GameState
+### <a name="state"></a> [GameState](#state)
 Базовый класс для реализации каждого из игровых состояний.
 Для использования необходимо унаследовать каждый свой класс от этого базового класса переопределив функции в соответствии с требованиями каждого из состояний.
 ```c++
