@@ -48,8 +48,11 @@ stateMachine.PopState(GameState &state);
 
 ### <a name=""></a>
 
-### <a name="changestate"></a> GameStateMachine::ChangeState()
+### <a name="changestate"></a> [GameStateMachine](#statemachine)::ChangeState()
 Метод для манипуляции игровыми состояниями, при использовании которого все текущие состояния очищаются и заменяются переданным в качетве параметра.
+```c++
+stateMachine.ChangeState(MyState::[Instance()](#stateinstance));
+```
   
 ### <a name="state"></a> GameState
 Базовый класс для реализации каждого из игровых состояний.
