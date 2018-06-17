@@ -25,7 +25,7 @@ $ ./main
     - [PushState()](#pushstate)
     - [PopState()](#popstate)
 2. [GameState](#state)
-    - blah
+    - [Instance()](#stateinstance)
     - blah
     - blah
 3. [Button](#button)
@@ -47,4 +47,13 @@ stateMachine.PopState(/*data*/);
 ```
   
   
-###
+### <a name-"stateinstance"></a> State::Instance()
+Каждый наследник должен реализовать метод *Instance()* таким образом чтобы в качестве параметров он принимал те данные которые нужны будут для использования в этом состоянии.
+Например 
+```c++
+Gamestate Instance(Inventory &inventory){/**/};
+```
+  
+```c++
+statemachine.PushState(&gamestate.Instance(player.inventory));
+```
