@@ -80,4 +80,7 @@ MyState* MainMenuState::Instance()
     static MyState myState;
     return &myState;
 };
-````
+```
+
+##### <a name-="drupevstates"></a> Draw(),Update(),EventHandle()
+бла бла бла
