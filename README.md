@@ -59,7 +59,7 @@ stateMachine.ChangeState(MyState::Instance());
 
 ### <a name="pushstate"></a> [GameStateMachine](#statemachine)::PushState()
 
-### <a name="drupev"></a>  [GameStateMachine](#statemachine)::Draw(), [...](#statemachine)::Update(), [...](#statemachine)::EventHandle()
+### <a name="drupev"></a>  [GameStateMachine](#statemachine)::Draw(), [-||-](#statemachine)::Update(), [-||-](#statemachine)::EventHandle()
 [Делигируют](#drupevstates) вызовы верхнему [состоянию](#state) в списке.
 
 <hr>
