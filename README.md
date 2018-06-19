@@ -24,6 +24,7 @@ $ ./main
     - [ChangeState()](#changestate)
     - [PushState()](#pushstate)
     - [PopState()](#popstate)
+    - [Draw(),Update(),EventHandle()](#drupev)
 2. [GameState](#state)
     - [Instance()](#stateinstance)
     - blah
@@ -53,6 +54,9 @@ stateMachine.PopState(GameState &state);
 ```c++
 stateMachine.ChangeState(MyState::Instance());
 ```
+
+### <a name="drupev"></a> Draw(),Update(),EventHandle()
+Делигируют вызовы верхнему состоянию в списке.
   
 ### <a name="state"></a> [GameState](#state)
 Базовый класс для реализации каждого из игровых состояний.
@@ -71,9 +75,9 @@ class MyState : public GameState
 Каждый наследник должен реализовать метод *Instance()* таким образом чтобы в качестве параметров он принимал те данные которые нужны будут для использования в этом состоянии.
 Например 
 ```c++
-GameState Instance(Inventory &inventory){/**/};
-```
-  
-```c++
-statemachine.PushState(&gamestate.Instance(player.inventory));
-```
+MainMenuState* MainMenuState::Instance()
+{
+    static MainMenuState mainMenuState;
+    return &mainMenuState;
+};
+````
