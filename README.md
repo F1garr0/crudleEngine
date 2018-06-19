@@ -27,7 +27,7 @@ $ ./main
     - [Draw(),Update(),EventHandle()](#drupev)
 2. [GameState](#state)
     - [Instance()](#stateinstance)
-    - blah
+    - [Draw(),Update(),EventHandle()](#drupevstates)
     - blah
 3. [Button](#button)
     - blah
@@ -75,9 +75,9 @@ class MyState : public GameState
 Каждый наследник должен реализовать метод *Instance()* таким образом чтобы в качестве параметров он принимал те данные которые нужны будут для использования в этом состоянии.
 Например 
 ```c++
-MainMenuState* MainMenuState::Instance()
+MyState* MainMenuState::Instance()
 {
-    static MainMenuState mainMenuState;
-    return &mainMenuState;
+    static MyState myState;
+    return &myState;
 };
 ````
