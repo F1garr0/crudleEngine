@@ -58,8 +58,26 @@ stateMachine.ChangeState(MyState::Instance());
 ```
 
 ### <a name="pushstate"></a> [GameStateMachine](#statemachine)::PushState()
+Вызов данной функции заносит в верх списка состояний еще одно, переданное через [Instance()](#stateinstance) в параметры.
+Таким образом использование аналогично предыдущему методу.
 
-### <a name="drupev"></a>  [GameStateMachine](#statemachine)::Draw(), [-||-](#statemachine)::Update(), [-||-](#statemachine)::EventHandle()
+### <a name="popstate"></a> [GameStateMachine](#statemachine)::PopState()
+При вызове этого метода из списка состояний удаляется верхнее.
+Может быть использовано для закрытия текущего состояния и возвращения к предыдущему если только в списке находится более одного состояния.
+Для этого из состояния необходимо обратиться к конечному автомату с запросом о вызове этой функции.
+Специально для таких случаев реализован механизм инкапсуляции родительского элемента в классе. Таким образом для экземпляра состояния [GameState](#state) родительским будет объект класса [GameStateMachine](#statemachine), ссылка на который будет записан в *parent*
+```c++
+//Через экзмепляр машины состояний
+statemachine.PushState(FirstState::Instance(this));
+statemachine.PushState(SecondState::Instacne(this));
+```
+
+```c++
+//внутри состояния в необходимом месте
+parent->PopState();
+```
+
+### <a name="drupev"></a>  [GameStateMachine](#statemachine)::Draw(), [...](#statemachine)::Update(), [...](#statemachine)::EventHandle()
 [Делигируют](#drupevstates) вызовы верхнему [состоянию](#state) в списке.
 
 <hr>
