@@ -15,7 +15,7 @@ void PlayingState::Cleanup()
 void PlayingState::Pause(){};
 void PlayingState::Resume(){};
 
-void PlayingState::HandleEvents(sf::RenderWindow &window, GameStateMachine* stateMachine)
+void PlayingState::HandleEvents(sf::RenderWindow &window)
 {
         sf::Event event;
         while (window.pollEvent(event))
@@ -26,7 +26,7 @@ void PlayingState::HandleEvents(sf::RenderWindow &window, GameStateMachine* stat
 
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
             {
-                stateMachine->ChangeState(MainMenuState::Instance());
+                parent->ChangeState(MainMenuState::Instance());
             }
         }
 };

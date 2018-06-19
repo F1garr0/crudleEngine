@@ -47,7 +47,7 @@ void MainMenuState::Cleanup()
 void MainMenuState::Pause(){};
 void MainMenuState::Resume(){};
 
-void MainMenuState::HandleEvents(sf::RenderWindow &window, GameStateMachine* stateMachine)
+void MainMenuState::HandleEvents(sf::RenderWindow &window)
 {
     sf::Event event;
     while (window.pollEvent(event))

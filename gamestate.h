@@ -9,7 +9,7 @@ class GameState
 public:
     virtual void Init();
     virtual void Cleanup();
-    virtual void HandleEvents(sf::RenderWindow &window, GameStateMachine *stateMachine);
+    virtual void HandleEvents(sf::RenderWindow &window);
     virtual void Update(sf::RenderWindow &window);
     virtual void Draw(sf::RenderWindow &window);
     GameStateMachine *parent;
