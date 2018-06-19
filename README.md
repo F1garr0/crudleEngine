@@ -56,7 +56,7 @@ stateMachine.ChangeState(MyState::Instance());
 ```
 
 ### <a name="drupev"></a> Draw(),Update(),EventHandle()
-Делигируют вызовы верхнему состоянию в списке.
+[Делигируют](#drupevstates) вызовы верхнему [состоянию](#state) в списке.
   
 ### <a name="state"></a> [GameState](#state)
 Базовый класс для реализации каждого из игровых состояний.
@@ -82,5 +82,5 @@ MyState* MainMenuState::Instance()
 };
 ```
 
-##### <a name-="drupevstates"></a> Draw(),Update(),EventHandle()
+### <a name-="drupevstates"></a> Draw(),Update(),EventHandle()
 бла бла бла
