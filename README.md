@@ -34,6 +34,8 @@ $ ./main
     - blah
     - blah
   
+<hr>
+
 ### <a name="statemachine"></a> [GameStateMachine](#statemachine)
 Это класс описывающий конечный автомат с магазинной памятью.
 Для его использования необходимо создать экземпляр класса __GameStateMachine__
@@ -55,10 +57,12 @@ stateMachine.PopState(GameState &state);
 stateMachine.ChangeState(MyState::Instance());
 ```
 
-### <a name="drupev"></a> Draw(),Update(),EventHandle()
+### <a name="pushstate"></a> [GameStateMachine](#statemachine)::PushState()
+
+### <a name="drupev"></a>  [GameStateMachine](#statemachine)::Draw(), [...](#statemachine)::Update(), [...](#statemachine)::EventHandle()
 [Делигируют](#drupevstates) вызовы верхнему [состоянию](#state) в списке.
 
-<hr><hr>
+<hr>
   
 ### <a name="state"></a> [GameState](#state)
 Базовый класс для реализации каждого из игровых состояний.
@@ -94,3 +98,4 @@ MyState* MainMenuState::Instance()
   
 >Draw - при необходимости очищает экран и передает окну ссылку на объекты для отрисовки
   
+  <hr>
