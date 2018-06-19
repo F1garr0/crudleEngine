@@ -82,5 +82,5 @@ MyState* MainMenuState::Instance()
 };
 ```
 
-### <a name-="drupevstates"></a> Draw(),Update(),EventHandle()
+### <a name="drupevstates"></a> Draw(),Update(),EventHandle()
 бла бла бла
