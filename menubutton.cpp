@@ -26,7 +26,7 @@ bool MenuButton::isFocused()
     else        return false;  
 };
 
-void MenuButton::setFocus(bool value)
+void MenuButton::setFocus(bool alue)
 {
     focused=value;
 };
