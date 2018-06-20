@@ -3,7 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "gamestate.h"
-//#include <functional>
+#include <functional>
 
 
 class MenuButton : public sf::Sprite
@@ -22,9 +22,9 @@ public:
     void loadTexture(sf::String stringPath);
     void setFocus(bool value);
     bool isMouseInBounds(sf::Window &window);
-    //std::function onClick;
+    std::function<void()> onClick;
     GameState *parent;
-    void onClick();
+    //void onClick();
 
 };
 
