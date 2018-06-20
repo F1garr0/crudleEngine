@@ -28,9 +28,9 @@ $ ./main
 2. [GameState](#state)
     - [Instance()](#stateinstance)
     - [Draw(),Update(),EventHandle()](#drupevstates)
-    - blah
-3. [Button](#button)
-    - blah
+    - [Init(),CleanUp()](#initclean)
+3. [AbstractButton](#button)
+    - [onClick()](#onClick())
     - blah
     - blah
   
@@ -51,7 +51,7 @@ stateMachine.PopState(GameState &state);
 
 ### <a name=""></a>
 
-### <a name="changestate"></a> [GameStateMachine](#statemachine)::ChangeState()
+### <a name="changestate"></a>  <center>[GameStateMachine](#statemachine)::ChangeState()</center>
 Метод для манипуляции игровыми состояниями, при использовании которого все текущие состояния очищаются и заменяются переданным в качетве параметра через [Instance()](#stateinstance) описанный самим разработчиком.
 ```c++
 stateMachine.ChangeState(MyState::Instance());
