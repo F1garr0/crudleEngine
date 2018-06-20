@@ -51,7 +51,7 @@ stateMachine.PopState(GameState &state);
 
 ### <a name=""></a>
 
-### <a name="changestate"></a>  <center>[GameStateMachine](#statemachine)::ChangeState()</center>
+### <a name="changestate"></a>  [GameStateMachine](#statemachine)::ChangeState()
 Метод для манипуляции игровыми состояниями, при использовании которого все текущие состояния очищаются и заменяются переданным в качетве параметра через [Instance()](#stateinstance) описанный самим разработчиком.
 ```c++
 stateMachine.ChangeState(MyState::Instance());
@@ -117,3 +117,7 @@ MyState* MainMenuState::Instance()
 >Draw - при необходимости очищает экран и передает окну ссылку на объекты для отрисовки
   
   <hr>
+
+  ### <a name="button"></a> <p align="justify">[AbstractButton](#button)</p>
+  Абстрактный класс реализующий механику кнопок в приложении.
+  Для использования необходимо написать 
