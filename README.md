@@ -30,7 +30,7 @@ $ ./main
     - [Draw(),Update(),EventHandle()](#drupevstates)
     - [Init(),CleanUp()](#initclean)
 3. [AbstractButton](#button)
-    - [onClick()](#onClick())
+    - [OnClick()](#onClick())
     - blah
     - blah
   
@@ -118,6 +118,10 @@ MyState* MainMenuState::Instance()
   
   <hr>
 
-  ### <a name="button"></a> <p align="justify">[AbstractButton](#button)</p>
+  ### <a name="button"></a> [AbstractButton](#button)
   Абстрактный класс реализующий механику кнопок в приложении.
-  Для использования необходимо написать 
+  Для использования необходимо создать свой класс для каждой из кнопок в котором переопределить виртуальный метод [OnClick()](#onClick()).
+
+
+### <a name="onClick()"></a> [AbstractButton](#button)::OnClick()
+Метод который необходимо переопределить в производном классе. Он отвечает за то, что будет происходить при нажатии на кнопку.
