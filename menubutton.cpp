@@ -1,14 +1,10 @@
 #include "menubutton.h"
 #include "playingstate.h"
-
-void change()
-{
-    parent->parent->ChangeState(PlayingState::Instance());
-};
+#include <iostream>
 
 MenuButton::MenuButton()
 {
- onClick = std::bind(change);
+
 };
 
 MenuButton::MenuButton(GameState &gamestate)
@@ -26,13 +22,7 @@ bool MenuButton::isFocused()
     else        return false;  
 };
 
-void MenuButton::setFocus(bool alue)
+void MenuButton::setFocus(bool value)
 {
     focused=value;
 };
-
-/*
-void MenuButton::onClick()
-{
-    parent->parent->ChangeState(PlayingState::Instance());
-}*/

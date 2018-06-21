@@ -1,6 +1,12 @@
 #include "mainmenustate.h"
 #include "playingstate.h"
 
+void beginGame(MenuButton *parent)
+{
+    parent->parent->parent->ChangeState(PlayingState::Instance());
+    //std::cout << "lol";
+};
+
 void MainMenuState::Init()
 {
     texture       = new sf::Texture;
@@ -12,6 +18,8 @@ void MainMenuState::Init()
 
     buttonBegin = new MenuButton;
     buttonBegin->parent=this;
+    buttonBegin->onClick = std::bind(beginGame,buttonBegin);
+    
 
 
     texture->loadFromFile("Resources/testimg.jpg")  ;
