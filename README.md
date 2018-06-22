@@ -29,10 +29,10 @@ $ ./main
     - [Instance()](#stateinstance)
     - [Draw(),Update(),EventHandle()](#drupevstates)
     - [Init(),CleanUp()](#initclean)
-3. [AbstractButton](#button)
-    - [OnClick()](#onClick())
-    - blah
-    - blah
+    - [*parent](#stateparent)
+3. [GameButton](#button)
+    - [OnClick()](#onclick)
+    - [*parent](#buttonparent)
   
 <hr>
 
@@ -118,12 +118,12 @@ MyState* MainMenuState::Instance()
   
   <hr>
 
-  ### <a name="button"></a> [AbstractButton](#button)
-  Абстрактный класс реализующий механику кнопок в приложении.
-  Для использования необходимо создать свой класс для каждой из кнопок в котором переопределить виртуальный метод [OnClick()](#onClick()).
+  ### <a name="button"></a> [GameButton](#button)
+  Класс реализующий функцию кнопок в приложении.
+В отличии от [GameState](#gamestate) нет необходимости наследовать класс для использования. Достаточно создать экземпляр этого класса и назначить ему функцию [OnClick()](#onclick). В данном подходе допускается отход от принципов ООП заложенный автором в угоду простоты использования.
 
 
-### <a name="onClick()"></a> [AbstractButton](#button)::OnClick()
+### <a name="onclick"></a> [GameButton](#button)::OnClick()
 Функция выполняемая при нажатии на кнопку.
 изначально не имеет никакого значения. Для использования необходимо описать функцию и прибиндить её к данной.
 ```c++
@@ -134,7 +134,7 @@ void beginGame(MenuButton *parent)
 
 /*
 */
-    buttonBegin = new MenuButton;
+    buttonBegin = new GameButton;
     buttonBegin->parent=this;
     buttonBegin->onClick = std::bind(beginGame,buttonBegin);
 
