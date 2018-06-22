@@ -124,4 +124,21 @@ MyState* MainMenuState::Instance()
 
 
 ### <a name="onClick()"></a> [AbstractButton](#button)::OnClick()
-Метод который необходимо переопределить в производном классе. Он отвечает за то, что будет происходить при нажатии на кнопку.
+Функция выполняемая при нажатии на кнопку.
+изначально не имеет никакого значения. Для использования необходимо описать функцию и прибиндить её к данной.
+```c++
+void beginGame(MenuButton *parent)
+{
+    parent->parent->parent->ChangeState(PlayingState::Instance());
+};
+
+/*
+*/
+    buttonBegin = new MenuButton;
+    buttonBegin->parent=this;
+    buttonBegin->onClick = std::bind(beginGame,buttonBegin);
+
+/*
+*/  
+```
+При биндинге функций первым параметром указывается имя функции, далее идут передаваемые ей аргументы.
